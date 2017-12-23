@@ -21,5 +21,4 @@ end
 -- Config.Add("mods/YourMod/scripts/entity/YourMod.lua")
 Config.Add("mods/CarrierCommander/scripts/entity/CarrierCommander.lua")
 
-
 return Config

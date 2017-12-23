@@ -2,6 +2,8 @@ package.path = package.path .. ";data/scripts/lib/?.lua"
 package.path = package.path .. ";data/scripts/server/?.lua"
 require ("factions")
 require ("stringutility")
+local s, b = pcall(require, 'mods/ShipScriptLoader/scripts/server/server')
+    if s then if b.onPlayerLogIn then local a = onPlayerLogIn; onPlayerLogIn = function(c) a(c); b.onPlayerLogIn(c); end end end
 
 function onStartUp()
     Server():registerCallback("onPlayerLogIn", "onPlayerLogIn")
@@ -64,6 +66,6 @@ function onPlayerLogOff(playerIndex)
 
 end
 
---THE LINE BELOW IS NEEDED FOR ShipScriptLoader
+--THE LINE BELOW IS NEEDED FOR ShipScriptLoader, Carrier Commanders instructions mentiont here is an issue in the instructions of ShipScriptLoader, but the instruction is the same; place the line here.
 local s, b = pcall(require, 'mods/ShipScriptLoader/scripts/server/server')
     if s then if b.onPlayerLogIn then local a = onPlayerLogIn; onPlayerLogIn = function(c) a(c); b.onPlayerLogIn(c); end end end

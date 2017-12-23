@@ -29,6 +29,7 @@
  * [Out of Sector Production](https://www.avorion.net/forum/index.php?topic=1322.0)
  * [ShipScriptLoader](http://www.avorion.net/forum/index.php/topic,3918.0.html)
  * [Carrier Commander](http://www.avorion.net/forum/index.php/topic,4268.0.html)
+ * [LogLevels](https://github.com/dirtyredz/LogLevels)
 
  ## [EndlessExpanse]() Mods written specially for XeroSpaceAdvanced
  * - SupplyAndDemand - ResourceDepots regenerate/degenerate the appropriate resources.
