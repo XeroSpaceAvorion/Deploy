@@ -54,7 +54,7 @@ function onPlayerLogIn(playerIndex)
     player:addScriptOnce("story/spawnai.lua")
     player:addScriptOnce("story/spawnguardian.lua")
     player:addScriptOnce("story/spawnadventurer.lua")
-
+    player:addScriptOnce("mods/oosp/scripts/player/oosproduction.lua")                            --oosp
     matchResources(player)
 end
 
