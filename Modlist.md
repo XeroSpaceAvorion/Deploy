@@ -4,16 +4,16 @@
 	files such as server/server.lua, we can easily and reliably do this.
 
 # How
-	##installation
+	## installation
 	Copy over all files from the Avorion folder to a fresh Avorion install's Avorion folder.
 
-	##Updating mods
-	###new mods
+	## Updating mods
+	### new mods
 	* Simply add all new files to the file structure.
 	* If files are already present, run a comparison, or find out what needs to happen.
 	* Check to see what vanilla files need modified, e.g. /server/server.lua
 
-	##existing Mods
+	## existing Mods
 	* Check mod log history/version history for compatibility notes for upgrading
 	* copy over new files
 	* verify no stale files are present (e.g. did mod remove or rename some of its files?)
