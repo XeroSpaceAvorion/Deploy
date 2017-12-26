@@ -30,8 +30,10 @@
  * [ShipScriptLoader](http://www.avorion.net/forum/index.php/topic,3918.0.html)
  * [Carrier Commander](http://www.avorion.net/forum/index.php/topic,4268.0.html)
  * [LogLevels](https://github.com/dirtyredz/LogLevels)
+ * [avorion-asteroid-respawn](https://github.com/XeroSpaceAvorion/avorion-asteroid-respawn) modified to be applied to all sectors.
 
  ## [EndlessExpanse]() Mods written specially for XeroSpaceAdvanced
- * - SupplyAndDemand - ResourceDepots regenerate/degenerate the appropriate resources.
- * - ACCESS - modified spawns for better availability of resources.
- * - WIP/unnamed concept - Daemon process that re-generates hidden sectors.
+ * SupplyAndDemand - ResourceDepots regenerate/degenerate the appropriate resources.
+ * Commands - Adds useful commands; **note; these need to be added to admin.xml for players, if players are to use them.**
+ * ACCESS - modified spawns for better availability of resources.
+ * ~~WIP/unnamed concept - Daemon process that re-generates hidden sectors.~~ (Not feasible unless applied at generation. best may in fact be to regenerate stations e.g. upon destruction, just like respawning asteroids.
