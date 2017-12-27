@@ -48,8 +48,21 @@ end
 function onPlayerLogIn(playerIndex)
     local player = Player(playerIndex)
     Server():broadcastChatMessage("Server", 0, "Player %s joined the galaxy"%_t, player.name)
-    player:sendChatMessage("MOTD", 2, "Welcome to XeroSpace Advanced! This server will be reset on 12/26 to add additional longevity mods. For more information, join the XeroSpace Discord! https://discordapp.com/invite/TzFW4wd"%_t);
-	player:sendChatMessage("MOTD", 2, "Please let a Moderator or Streamer know if you encounter any bugs or other issues"%_t);
+
+	local lines = Server():getValue("motdLines")
+
+	if(lines ~= nil) then
+			lines = tonumber(lines)
+		for i=1,lines do
+				line = Server():getValue("motdLine" .. i)
+				if line ~= nil then
+					 player:sendChatMessage("MOTD", ChatMessageType.Whisp, line)
+				end
+		end
+	else
+		player:sendChatMessage("Default MOTD", ChatMessageType.Whisp, "Welcome to the server."%_t);
+	end
+
     player:addScriptOnce("headhunter.lua")
     player:addScriptOnce("eventscheduler.lua")
     player:addScriptOnce("story/spawnswoks.lua")
