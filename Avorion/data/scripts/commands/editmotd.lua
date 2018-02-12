@@ -36,7 +36,9 @@ elseif option == "test" then
 	local lines = Server():getValue("motdLines")
 	if(lines ~= nil) then
 		for i=1,lines do
-			player:sendChatMessage("MOTD", ChatMessageType.Whisp, getLine(i))
+			if line ~= nil then
+				player:sendChatMessage("MOTD", ChatMessageType.Whisp, getLine(i))
+			end
 		end
 	end
 --You dun
@@ -44,7 +46,9 @@ elseif option == "broadcast" then
 	local lines = Server():getValue("motdLines")
 	if(lines ~= nil) then
 		for i=1,lines do
-			Server():broadcastChatMessage("MOTD", ChatMessageType.Whisp, getLine(i))
+			if line ~= nil then
+				Server():broadcastChatMessage("MOTD", ChatMessageType.Whisp, getLine(i))
+			end
 		end
 	end
 --You dun goofed, you need to get some help.
@@ -73,11 +77,11 @@ end
 
 function removeLine()
  	local lines = Server():getValue("motdLines")
-	if lines == nil then lines = 0 end
-	lines = lines -1
+
 	Server():setValue("motdLine" .. lines,nil)
 
-	if(lines == 0) then lines = nul end
+	lines = lines -1
+	if(lines == 0) then lines = nil end
 	--Only set after above was processed succesfully to avoid problems.
 	 Server():setValue("motdLines",lines)
 
